@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=false;” />
+<title>Sign In</title>
+<link rel="icon" href="img/favicon.gif" type="image/gif" sizes="16x16">
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
+<!--        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>       
+-->
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+<!--<link href="css/bootstrap-theme.css" type="text/css" rel="stylesheet"/>-->
+<link href="css/my-style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body class="eclincher">
+<!--  logo-panel Start -->
+<div class="logo-panel">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-lg-12 text-center center-block"> <img src="img/logo.png" class="img-responsive center-block" />
+      </div>
+    </div>
+  </div>
+</div>
+<!--  logo-panel End -->
+<!--  schedule-icon-panel Start -->
+<div class="logins-panel center-block" id="autocenterdiv">
+  <div class="container">
+    <div class="row">
+      <form class="form-horizontal text-center" name="commentform" onsubmit="return validate();">
+      <div class="col-xs-12 rounded-box text-center center-block clearfix">
+        <div class="headding">
+          <H1><img src="img/sign-in-icon.png" class="img-title headding-img" />Sign In with <strong>Email</strong></H1>
+        </div>
+        <div class="about-content">
+          <p>Login with your registred email and password.</p>
+          <div class="col-xs-12 col-sm-12 about-content-address">
+              <div class="form-group">
+                <div class="form-group">
+                  <div class="col-xs-12 col-md-12 col-lg-12 col-none input-margin">
+                    <input type="text" id="email" name="email" class="form-control email-imput" placeholder="Email" maxlength="100" autofocus/>
+                    <span id="email_error"></span>                    
+                  </div>                    
+                </div>
+                <div class="form-group">
+                  <div class="col-xs-12 col-md-12 col-lg-12 col-none input-margin">
+                    <input type="password" id="password" name="password" class="form-control password-imput" placeholder="Password" maxlength="20"/>
+                    <span id="password_error"></span>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 forgot-password col-none"><a href="forgot-password.html" class="pull-left">Forgot Your Password?</a></div>                
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>      
+      <!--  get-started-panel Start -->
+      <div class="signin-started-panel margin-top">
+          <div class="create-account text-center center-block sign-btn">
+            <input class="gobutton" type="submit" value="Sign In" />
+            <p class="OR-padding">- OR -</p>
+            <div class="signin center-block">
+            	<a class="btn btn-block btn-lg btn-social btn-facebook"><i class="fa fa-facebook"></i> Sign in Facebook</a>	
+    <!--        <a class="btn btn-block btn-lg btn-social btn-google-plus"><i class="fa fa-google-plus"></i> Sign in Google Plus</a>	        
+    -->     </div>
+          </div>
+      </div>
+      </form>
+      <!--  get-started-panel End -->
+    </div>
+  </div>
+</div>
+<!--  schedule-icon-panel End -->
+
+
+
+<!--  footer-panel Start -->
+<div class="footer-panel center-block text-center">
+      <ul class="footer-menu">
+        <li><a href="create-account.html" class="border-right">Create Your Account</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+<!--  get-started-panel End -->
+
+
+<script src="js/jquery.js" language="javascript"></script>   
+<script type="application/javascript" language="javascript">
+$(document).ready(function() {
+  var topPos = (($(window).height() - $('.footer-panel').height() - $('.logo-panel').height())  - $('#autocenterdiv').outerHeight())/2;
+  topPos = topPos;
+  $('#autocenterdiv').css({
+    left: ($(window).width() - $('#autocenterdiv').outerWidth())/2,
+    'margin-top': topPos > 0 ? topPos : 0
+  });
+});
+function validate()
+{
+  var email = $('#email').val();
+  email = email.trim();
+  var password = $('#password').val();
+  password = password.trim();
+  var regexp =  /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{3})+$/;
+  var flag = 0;
+  if(email == '')
+  {
+	 $('#email_error').addClass('msg-rounded-red');
+	 $('#email_error').html('Email should not be left blank.'); 
+	 flag = 1; 
+  }
+  else if(!regexp.test(email))
+  {
+	 $('#email_error').addClass('msg-rounded-red');
+	 $('#email_error').html('Invalid Email Address, please Insert correct Email Address.');
+	 flag = 1; 
+  }
+  else
+  {
+	 $('#email_error').removeClass('msg-rounded-red');
+	 $('#email_error').html('');  
+  }
+  if(password == '')
+  {
+	 $('#password_error').addClass('msg-rounded-red');
+	 $('#password_error').html('Password should not be left blank.');  
+	 flag = 1; 
+  }
+  else if(password.length < 5 || password.length > 20)
+  {
+	 $('#password_error').addClass('msg-rounded-red');
+	 $('#password_error').html('Password should in between 5 to 20 characters.');  
+	 flag = 1; 
+  }
+  else
+  {
+	 $('#password_error').removeClass('msg-rounded-red');
+	 $('#password_error').html('');  
+  }
+  if(flag == 0)
+  {
+    //return true;
+	window.location.href = "inbox.html";
+	return false;
+  }
+  else
+  {
+    return false;
+  }
+}
+</script>
+
+
+</body>
+</html>

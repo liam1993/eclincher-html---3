@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=false;” />              
+        <title>Welcome to eClincher</title>
+        <link rel="icon" href="img/favicon.gif" type="image/gif" sizes="16x16">        
+        <link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
+        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+<!--        <link href="css/bootstrap-theme.css" type="text/css" rel="stylesheet"/>-->
+        <link href="css/my-style.css" type="text/css" rel="stylesheet"/>        
+</head>
+
+<body class="eclincher">
+
+<!--  logo-panel Start -->     
+<div class="logo-panel">
+   <div class="container">
+      <div class="row">    	
+        <div class="col-xs-12 col-lg-12 text-center center-block">
+		<img src="img/logo.png" class="img-responsive center-block" />
+        <p class="p">Social Media Management & Analytics Platform</p>
+        </div>        
+      </div>
+   </div>
+</div>
+<!--  logo-panel End --> 
+
+
+<!--  schedule-icon-panel Start -->     
+<div class="schedule-icon-panel center-block" id="autocenterdiv">
+   <div class="container">
+      <div class="row">    	
+        <div class="col-xs-12 col-lg-12 text-center center-block">
+		<img src="img/schedule-icon.png" class="img-responsive center-block" />
+        <h1>Monitor. Update. Schedule</h1>
+        <p class="p">You can add multiple social networks to view, <br />post and schedule message on the go.</p>
+        </div>        
+      </div>
+   </div>
+</div>
+<!--  schedule-icon-panel End -->   
+
+
+<!--  get-started-panel Start -->     
+<div class="home-get-started-panel get-started-panel index-footer" id="home-footer">
+   <div class="container">
+      <div class="row">    	
+        <div class="col-xs-12 col-lg-12 text-center center-block">
+		<a href="login.html">Get Started</a>
+        </div>        
+      </div>
+   </div>
+</div>
+<!--  get-started-panel End -->     
+
+<script src="js/jquery.js" language="javascript"></script>   
+<script type="application/javascript" language="javascript">
+$(document).ready(function() {
+  //var topPos = (($(window).height() - ($('.get-started-panel').height() + $('.logo-panel').height()))  - $('#autocenterdiv').outerHeight())/2;
+  var topPos = (($(window).height() - $('.get-started-panel').height() - $('.logo-panel').height())  - $('#autocenterdiv').outerHeight())/2;
+  topPos = topPos/2;
+  $('#autocenterdiv').css({
+    left: ($(window).width() - $('#autocenterdiv').outerWidth())/2,
+    'margin-top': topPos > 0 ? topPos : 0,
+	'margin-bottom': topPos > 0 ? topPos : 0
+  });
+});
+</script>
+
+
+</body>
+</html>

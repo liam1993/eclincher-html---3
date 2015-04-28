@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=false;” />
+<title>Registration Successful</title>
+<link rel="icon" href="img/favicon.gif" type="image/gif" sizes="16x16">
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
+<!--        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>       
+-->
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+<!--<link href="css/bootstrap-theme.css" type="text/css" rel="stylesheet"/>-->
+<link href="css/my-style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body class="eclincher">
+<!--  logo-panel Start -->
+<div class="logo-panel">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-lg-12 text-center center-block"> <img src="img/logo.png" class="img-responsive center-block" />
+      </div>
+    </div>
+  </div>
+</div>
+<!--  logo-panel End -->
+<!--  schedule-icon-panel Start -->
+<div class="success-panel center-block" id="autocenterdiv">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 rounded-box text-center center-block">
+        <div class="headding">
+          <H1><img src="img/registration-icon.png" class="img-title headding-img" />Registration <strong>Successful</strong></H1>
+        </div>
+        <div class="about-content">
+          <p>You have completed your registration process<br />successfully. You can now configer you multiple social accounts.</p><br />          
+          <p>You current plan will be.<br /><span>“Basic”</span></p>
+          <img src="img/right-icon.png" class="success-img img-responsive center-block" />
+          <p>You can upgrade/downgrade your plan anytime.</p>                                                  
+        </div>
+      </div>
+      
+<!--  get-started-panel Start -->
+<div class="get-started-panel margin-top">
+      <div class="create-account col-xs-12 col-lg-12 text-center center-block sign-btn"> <a href="home.html">Manage Account</a>
+        <p>Connect your social accounts.</p>
+      </div>
+</div>
+<!--  get-started-panel End -->      
+      
+    </div>
+  </div>
+</div>
+<!--  schedule-icon-panel End -->
+
+
+<script src="js/jquery.js" language="javascript"></script>   
+<script type="application/javascript" language="javascript">
+$(document).ready(function() {
+  var topPos = (($(window).height() - $('.logo-panel').height())  - $('#autocenterdiv').outerHeight())/2;
+  topPos = topPos;
+  $('#autocenterdiv').css({
+    left: ($(window).width() - $('#autocenterdiv').outerWidth())/2,
+    'margin-top': topPos > 0 ? topPos : 0
+  });
+});
+</script>
+
+</body>
+</html>

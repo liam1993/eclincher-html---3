@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=false;” />
+<title>Publishing</title>
+<link rel="icon" href="img/favicon.gif" type="image/gif" sizes="16x16">
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
+<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+<link href="css/style.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="css/reset.css">
+<!-- CSS reset -->
+<link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<!--        <link href="css/bootstrap-theme.css" type="text/css" rel="stylesheet"/>-->
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="css/my-style.css" type="text/css" rel="stylesheet"/>
+
+<!--<link href="css/bootstrap-datepicker.css" type="text/css" rel="stylesheet"/>
+<link href="css/bootstrap-datepicker.min.css" type="text/css" rel="stylesheet"/>
+<link href="css/jquery-responsiveTables.css" type="text/css" rel="stylesheet"/>-->
+
+<link href="css/responsive-calendar.css" rel="stylesheet">
+ 
+<script type="text/javascript" src="js/jquery.js"></script>
+ <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<br />
+<script src="js/modernizr.js"></script>
+<!-- Modernizr -->
+</head>
+<body class="inner-page-body">
+
+<!--  inner-page-header-panel Start -->     
+<div class="inner-page-header-panel">
+   <div class="container-fluid">
+      <div class="row" style="background-image:url(img/inner-header-strip.jpg);">    	
+        <div class="col-xs-12 col-lg-12 text-center center-block">
+        <div class="col-xs-3 col-sm-3 col-lg-3 padding-left"><img src="img/small-logo.png" class="img-responsive small-logo-img" /></div>
+        <div class="col-xs-6 col-sm-6 col-lg-6 inner-page-header-title-panel col-xs-12 col-lg-12 text-center center-block"><strong>Publishing</strong></div>                   
+        <div class="col-xs-3  col-sm-3 col-lg-3 padding-right">
+        <a href="setting.html"><img src="img/setting.png" class="img-responsive setting-img" /></a>
+<!--        <a href="#"><img src="img/add-this.png" class="img-responsive setting-img" /></a> -->              
+        </div>
+        <div class="clearfix"></div>
+        </div>        
+      </div>
+   </div>
+</div>
+<!--  inner-page-header-panel End --> 
+
+<!--  inner-page-header-panel Start -->
+<div class="publish-panel-content">
+  <div class="padding-left-right-none panel-rows container">
+    <div class="publish-padding-add panel-rows inner-row row inner-row-publish">
+      <div class="facebook-center text-center center-block">
+      <div class=" publish-new-post-panel-rounded center-block float-none">
+        <div class="clearfix publish-new-post-tab-box tab-box publish-panel col-xs-12 col-sm-12 col-lg-12">
+          <div class="cd-tabs">
+            <nav>
+              <ul class="cd-tabs-navigation">
+                <li><a data-content="inbox" class="selected publish-li" href="#0" style="display:inline-block;"></a></li>
+                <li><a data-content="new" href="#0" class="publish-li" style="display:inline-block;"></a></li>
+                <li><a data-content="gallery" href="#0" class="publish-li" style="display:inline-block;"></a></li>
+                <li><a data-content="store" href="#0" class="publish-li" style="display:inline-block;"></a></li>
+              </ul>
+              <!-- cd-tabs-navigation -->
+            </nav>
+            <ul class="cd-tabs-content">
+              <li data-content="inbox" class="selected">              
+                <div class="col-xs-12 col-sm-12 about-content-address">
+                <p class="tab-main-headding text-center center-block">New Post</p>
+                  <form class="form-horizontal text-center" name="commentform" onsubmit="return sendmail();">
+                    <div class="publish-form-padding form-group padding-left-right">                       
+                      <div class="form-group">
+                        <div class="col-xs-12 col-md-12 col-lg-12 input-margin">
+                          <select name="timepass" class="form-control custom-select name-imput">
+                            <option>Select Profile to Post</option>
+                            <option>Facebook</option>
+                            <option>Twitter</option>
+                          </select>                          
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-xs-12 col-md-12 col-lg-12 input-margin">
+                          <input type="text" rows="5" id="name" name="name" class="form-control write-your-message-imput" placeholder="Write Your Message" maxlength="300"/>
+                          <span id="name_error" class="error_message_contact"></span> </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-xs-8 col-md-10 col-lg-10 input-margin">
+                          <input type="text" id="name" name="name" class="form-control add-link-imput" placeholder="Add aLink" maxlength="100"/>
+                        </div>
+                        <div class="btn btn-primary  col-xs-1 col-md-1 col-lg-1 add-link-img-imput"></div>
+                        <div class="btn btn-primary btn-file col-xs-1 col-md-1 col-lg-1">
+                          <input id="input-4" type="file" multiple="true" class="add-attachment-imput">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <!--<div class="col-xs-12 col-md-12 col-lg-12" style="margin-bottom:15px;">
+                    <INPUT TYPE="file" NAME="attachedfile" class="add-attachment-imput" MAXLENGTH=10 ALLOW="text/*" > 
+                    </div>-->
+                      </div>
+                    </div>                    
+                  </form>                                    
+                </div>
+                <div class="clearfix"></div>
+                <div class="panel with-nav-tabs panel-default panel-publish">
+                <!--<div class="panel-heading">
+                        <ul class="nav nav-tabs cd-tabs-change">
+                            <li class="cd-tabs-content-li"><a href="#tab1default" id="firsttabinner" data-toggle="tab">POST IT NOW</a></li>
+                            <li class="active cd-tabs-content-li"><a href="#tab2default" data-toggle="tab">SCHEDULE</a></li>
+                            <li class="cd-tabs-content-li"><a href="#tab3default" data-toggle="tab">SAVE AS DRAFT</a></li>  
+                        </ul>
+                </div>-->
+<script>
+function showHideDiv(id)
+{
+	/*var obj = document.getElementById(id);
+	if (obj.style.display=="none")
+	{
+	obj.style.display='block';
+	} else if(obj.style.display=="block"){
+	obj.style.display='none';
+	}*/
+	
+	var obj = document.getElementById(id);
+	if(obj.style.display=="none")
+	{
+		$('#'+id).fadeIn('300');
+		$('html, body').stop().animate({
+				'scrollTop': $('#'+id).offset().top
+		  }, 900, 'swing', function () {
+		});
+	}
+	else if(obj.style.display=="")
+	{
+		$('#'+id).fadeOut('300');
+	}
+}
+</script>      
+      <!--  get-started-panel Start -->
+      	<div class="col-xs-12 col-lg-12 btn-bottom"> 
+            <input class="btn btn-primary" type="button" value="POST IT NOW" />
+        	<input class="btn btn-primary" type="button" value="SCHEDULE" onclick="showHideDiv('div-1')"/>
+        	<input class="btn btn-primary" type="button" value="SAVE AS DRAFT" />
+      </div>
+      <!--  get-started-panel End -->                   
+                
+                <div id="div-1" class="panel-body" style="display:none;">
+                    <div class="tab-content">                       
+                        <div class="tab-pane active" id="tab1default">
+                         <h1 class="schedule-title"><img src="img/small-schedule-icon.png" /> <strong>Schedule it -</strong> <span> Select date & time to Schedule your post.</span></h1>
+                        <div class="datepicker">
+                        		<!-- Responsive calendar - START -->
+                                <div class="responsive-calendar">
+                                    <div class="controls clearfix">
+                                        <a class="pull-left" data-go="prev"><div class="btn-primary-none btn btn-primary"><img src="img/date-left-arrow.png" class="img-responsive" /></div></a>
+                                        <h4><span data-head-year></span> <span data-head-month></span></h4>
+                                        <a class="pull-right" data-go="next"><div class="btn-primary-none btn btn-primary"><img src="img/date-right-arrow.png" class="img-responsive" /></div></a>
+                                    </div><hr/>
+                                    <div class="day-headers">
+                                      <div class="day header">Mon</div>
+                                      <div class="day header">Tue</div>
+                                      <div class="day header">Wed</div>
+                                      <div class="day header">Thu</div>
+                                      <div class="day header">Fri</div>
+                                      <div class="day header">Sat</div>
+                                      <div class="day header">Sun</div>
+                                    </div>
+                                    <div class="days-date days" data-group="days">
+                                      
+                                    </div>
+                              </div>
+                              <!-- Responsive calendar - END -->
+                        <!--<img src="img/calendar.png" class="img-responsive" />-->
+                        </div>
+                        <form style="text-align: start; padding-top:10px;">                         
+                         <!--<label style="text-align: start;">
+                         <input type="checkbox" value="remember-me"><span class="schedule-inner-text">Repeat Posting Everyday</span>
+                         </label>-->
+                         <div class="col-xs-12 col-sm-12 col-lg-12  form-group time-imput-box padding-left">
+							  <div class="col-xs-5 col-sm-5 col-lg-5 padding-left">
+                              <select name="timepass" class="form-control custom-select  days-input-time-box">
+                                <option>01</option>
+                                <option>02</option>
+                                <option>03</option>
+                                <option>04</option>
+                                <option>05</option>
+                                <option>06</option>
+                                <option>07</option>
+                                <option>08</option>
+                                <option>09</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>   
+                              </select>
+                              </div>
+                          <div class="col-xs-5 col-sm-5 col-lg-5">                                                          
+                              <select name="timepass" class="form-control custom-select  days-input-time-box">
+                                <option>10</option>
+                                <option>20</option>
+                                <option>30</option>
+                                <option>40</option>
+                                <option>50</option>
+                                <option>60</option>   
+                              </select>
+                         </div>                                                  
+                        <div class="col-xs-2 col-sm-2 col-lg-2"> 
+                        <a href="javascript:void(0);" class="am-pm btn btn-default line-height">AM</a>
+                        <a href="javascript:void(0);" class="am-pm btn btn-default line-height">PM</a>                       
+						</div>
+                        </div>                                                 
+                         <div class="clearfix"></div>
+						 <div id="remember" class="col-xs-12 col-lg-12 checkbox pull-left checkbox col-none clearfix" style="margin-top:0px;">
+                    <label class="text-left"><input type="checkbox" id="terms_condition" value="remember-me"> <span class="checkbox-text">Repeat Posting</span></label>
+                    <span id="terms_condition_error"></span>
+                </div>                         
+                         <div class="col-xs-12 col-lg-5 days days form-group padding-left">
+                          <p>Every</p>                          
+                          <select name="timepass" class="form-control custom-select days-imput">
+                            <option>Day</option>
+                            <option>Sunday</option>
+                            <option>Monday</option>
+                            <option>Tuesday</option>
+                            <option>Wednesday</option>
+                            <option>Thursday</option>
+                            <option>Friday</option>
+                            <option>Saturday</option>
+                          </select>
+                      </div>
+                         <div class="col-xs-12 col-lg-7 days form-group padding-left">
+                          <p>For the next</p>                          
+                          <select name="timepass" class="form-control custom-select days-imput">
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                          </select>
+                          <p>days</p>                                                    
+                      </div>                      	                        
+                        <input class="center-block btn btn-primary margin" type="submit" value="Add to Schedule" />                        
+                        </form>
+                         <div class="small-post">
+                         <h1 class="schedule-title"><img src="img/small-post-icon.png" /> <strong>Post Schedule -</strong></h1>
+						 <div class="small-post-panel">24 Mar, 2015   6:50 PM <a href="#"><img src="img/small-delete.png" class="small-post-delete img-responsive" /></a></div>
+						 <div class="small-post-panel">24 Mar, 2015   6:50 PM <a href="#"><img src="img/small-delete.png" class="small-post-delete img-responsive" /></a></div>
+                         </div>                                           
+                        </div>
+                        <div class="tab-pane fade" id="tab2default">Default 4</div>
+                        <div class="tab-pane fade" id="tab3default">Default 5</div>
+                    </div>
+                </div>
+            </div>
+              </li> 
+              
+              <li data-content="new">
+	            <!-- Responsive calendar - START -->
+                <p class="tab-main-headding text-center center-block">Schedule Post</p>                
+                <div class="schdule-padding-top col-xs-12  col-sm-12  col-lg-12 schedule-tab text-left padding-left" style="margin-bottom:10px;"> 
+                <div class="col-xs-6  col-sm-4 col-lg-4 padding-left">
+                <a href="#"><img src="img/schedule-small-icon-02.png" class="" /> Profile VIew</a>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-lg-4 padding-left">
+                <a href="#"><img src="img/schedule-small-icon-01.png" class="" /> Calendar View</a>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-lg-4 padding-left">
+                <a href="#"><img src="img/schedule-small-icon-03.png" class="" /> List VIew</a>
+                </div>                                
+                </div>
+                <div class="clearfix"></div>
+                <div class="responsive-calendar">
+                    <div class="controls clearfix">
+                                        <a class="pull-left" data-go="prev"><div class="btn-primary-none btn btn-primary"><img src="img/date-left-arrow.png" class="img-responsive" /></div></a>
+                                        <h4><span data-head-year></span> <span data-head-month></span></h4>
+                                        <a class="pull-right" data-go="next"><div class="btn-primary-none btn btn-primary"><img src="img/date-right-arrow.png" class="img-responsive" /></div></a>
+                    </div><hr/>
+                    <div class="day-headers">
+                      <div class="day header">Mon</div>
+                      <div class="day header">Tue</div>
+                      <div class="day header">Wed</div>
+                      <div class="day header">Thu</div>
+                      <div class="day header">Fri</div>
+                      <div class="day header">Sat</div>
+                      <div class="day header">Sun</div>
+                    </div>
+                    <div class="days-date days" data-group="days">
+                      
+                    </div>
+              </div>
+              <!-- Responsive calendar - END -->
+                <!--<img src="img/calendar.png" class="img-responsive" />  -->                 
+                <div class="schedule-tab-title text-left">
+                <h1><img src="img/small-schedule-icon.png" class="" /><strong>March 4 :</strong> <span>Day Preview</span></h1>
+                <div class="col-xs-12  col-sm-12 col-lg-12 date-post-box">
+                <div class="col-xs-12 col-sm-4 col-lg-4 padding-img"><img src="img/schedule-icon-01.png" class="img-responsive" /></div>
+                <div class="col-xs-12 col-sm-8 col-lg-8 date-post">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br />
+                <span>1:20 am</span><br />
+                <a href="#"><img src="img/facebook-small-icon.png" class="img-responsive socialimg"/></a>
+                <a href="#"><img src="img/twitter-small-icon.png" class="img-responsive socialimg"/></a> 
+                <a href="#"><img src="img/linkdin-small-icon.png" class="img-responsive socialimg"/></a>                                               
+                <a href="#"><img src="img/google-plus-small-icon.png" class="img-responsive socialimg"/></a>                                                                                
+                </p>
+                <div class="col-lg-12 padding-right">
+                <a href="#" class="pull-right"><img src="img/delete-small-icon.png" class="img-responsive"/>Delete</a>                
+                <a href="#" class="pull-right"><img src="img/edit-small-icon.png" class="img-responsive"/>Edit</a>                
+                </div>
+                </div>                
+                </div>
+                </div>  
+                                                 
+              </li>
+              
+              <li data-content="gallery">
+                <div class="schedule-tab-title text-left">
+                <p class="tab-main-headding text-center center-block">Draft Post</p>                                
+                <h1><img src="img/small-schedule-icon.png" class="" /><strong>March 4 :</strong> <span>Day Preview</span></h1>
+                <div class="col-xs-12  col-sm-12 col-lg-12 date-post-box">
+                <div class="col-xs-12 col-sm-4 col-lg-4 padding-img"><img src="img/schedule-icon-01.png" class="img-responsive" /></div>
+                <div class="col-xs-12 col-sm-8 col-lg-8 date-post">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br />
+                <span>1:20 am</span><br />
+                <a href="#"><img src="img/facebook-small-icon.png" class="img-responsive socialimg"/></a>
+                <a href="#"><img src="img/twitter-small-icon.png" class="img-responsive socialimg"/></a> 
+                <a href="#"><img src="img/linkdin-small-icon.png" class="img-responsive socialimg"/></a>                                               
+                <a href="#"><img src="img/google-plus-small-icon.png" class="img-responsive socialimg"/></a>                                                                                
+                </p>
+                <div class="col-lg-12 padding-right">
+                <a href="#" class="pull-right"><img src="img/delete-small-icon.png" class="img-responsive"/>Delete</a>                
+                <a href="#" class="pull-right"><img src="img/edit-small-icon.png" class="img-responsive"/>Edit</a>                
+                </div>
+                </div>                
+                </div>
+                <div class="col-xs-12  col-sm-12 col-lg-12 date-post-box">
+                <div class="col-xs-12 col-sm-4 col-lg-4 padding-img"><img src="img/schedule-icon-01.png" class="img-responsive" /></div>
+                <div class="col-xs-12 col-sm-8 col-lg-8 date-post">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br />
+                <span>1:20 am</span><br />
+                <a href="#"><img src="img/facebook-small-icon.png" class="img-responsive socialimg"/></a>
+                <a href="#"><img src="img/twitter-small-icon.png" class="img-responsive socialimg"/></a> 
+                <a href="#"><img src="img/linkdin-small-icon.png" class="img-responsive socialimg"/></a>                                               
+                <a href="#"><img src="img/google-plus-small-icon.png" class="img-responsive socialimg"/></a>                                                                                
+                </p>
+                <div class="col-lg-12 padding-right">
+                <a href="#" class="pull-right"><img src="img/delete-small-icon.png" class="img-responsive"/>Delete</a>                
+                <a href="#" class="pull-right"><img src="img/edit-small-icon.png" class="img-responsive"/>Edit</a>                
+                </div>
+                </div>                
+                </div>                
+                <div class="col-xs-12  col-sm-12 col-lg-12 date-post-box">
+                <div class="col-xs-12 col-sm-4 col-lg-4 padding-img"><img src="img/schedule-icon-01.png" class="img-responsive" /></div>
+                <div class="col-xs-12 col-sm-8 col-lg-8 date-post">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br />
+                <span>1:20 am</span><br />
+                <a href="#"><img src="img/facebook-small-icon.png" class="img-responsive socialimg"/></a>
+                <a href="#"><img src="img/twitter-small-icon.png" class="img-responsive socialimg"/></a> 
+                <a href="#"><img src="img/linkdin-small-icon.png" class="img-responsive socialimg"/></a>                                               
+                <a href="#"><img src="img/google-plus-small-icon.png" class="img-responsive socialimg"/></a>                                                                                
+                </p>
+                <div class="col-lg-12 padding-right">
+                <a href="#" class="pull-right"><img src="img/delete-small-icon.png" class="img-responsive"/>Delete</a>                
+                <a href="#" class="pull-right"><img src="img/edit-small-icon.png" class="img-responsive"/>Edit</a>                
+                </div>
+                </div>                
+                </div>
+                <div class="col-xs-12  col-sm-12 col-lg-12 date-post-box">
+                <div class="col-xs-12 col-sm-4 col-lg-4 padding-img"><img src="img/schedule-icon-01.png" class="img-responsive" /></div>
+                <div class="col-xs-12 col-sm-8 col-lg-8 date-post">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br />
+                <span>1:20 am</span><br />
+                <a href="#"><img src="img/facebook-small-icon.png" class="img-responsive socialimg"/></a>
+                <a href="#"><img src="img/twitter-small-icon.png" class="img-responsive socialimg"/></a> 
+                <a href="#"><img src="img/linkdin-small-icon.png" class="img-responsive socialimg"/></a>                                               
+                <a href="#"><img src="img/google-plus-small-icon.png" class="img-responsive socialimg"/></a>                                                                                
+                </p>
+                <div class="col-lg-12 padding-right">
+                <a href="#" class="pull-right"><img src="img/delete-small-icon.png" class="img-responsive"/>Delete</a>                
+                <a href="#" class="pull-right"><img src="img/edit-small-icon.png" class="img-responsive"/>Edit</a>                
+                </div>
+                </div>                
+                </div>
+                <div class="col-xs-12  col-sm-12 col-lg-12 date-post-box">
+                <div class="col-xs-12 col-sm-4 col-lg-4 padding-img"><img src="img/schedule-icon-01.png" class="img-responsive" /></div>
+                <div class="col-xs-12 col-sm-8 col-lg-8 date-post">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br />
+                <span>1:20 am</span><br />
+                <a href="#"><img src="img/facebook-small-icon.png" class="img-responsive socialimg"/></a>
+                <a href="#"><img src="img/twitter-small-icon.png" class="img-responsive socialimg"/></a> 
+                <a href="#"><img src="img/linkdin-small-icon.png" class="img-responsive socialimg"/></a>                                               
+                <a href="#"><img src="img/google-plus-small-icon.png" class="img-responsive socialimg"/></a>                                                                                
+                </p>
+                <div class="col-lg-12 padding-right">
+                <a href="#" class="pull-right"><img src="img/delete-small-icon.png" class="img-responsive"/>Delete</a>                
+                <a href="#" class="pull-right"><img src="img/edit-small-icon.png" class="img-responsive"/>Edit</a>                
+                </div>
+                </div>                
+                </div>                                
+                </div>
+              </li>
+              
+              <li data-content="store">
+              <div>
+                <p class="tab-main-headding text-center center-block">Auto Post</p>              
+              </div>
+              </li>              
+              
+              
+              
+            </ul>
+            <!-- cd-tabs-content -->
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  inner-page-header-panel End -->
+<!--  inner-page-footer-panel Start -->
+<div class="footer inner-page-footer-panel">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="padding-left-right-none col-xs-12 col-lg-12 text-center center-block inner-footer-nav">
+        <ul class="inner-footer-nav">
+          <li><a href="home.html"><img src="img/footer-inner-home.png" class="img-responsive center-block inner-footer-nav-img" /> Home</a></li>
+          <li><a href="inbox.html"><img src="img/footer-inner-inbox.png" class="img-responsive center-block inner-footer-nav-img" /> Inbox</a></li>
+          <li><a href="#" class="active"><img src="img/footer-inner-publish.png" class="img-responsive center-block inner-footer-nav-img" /> Publishing</a></li>
+          <li><a href="engagement.html"><img src="img/footer-inner-favorite.png" class="img-responsive center-block inner-footer-nav-img" /> Engagement</a></li>
+          <li><a href="analytics.html"><img src="img/footer-inner-analyze.png" class="img-responsive center-block inner-footer-nav-img" /> Analytics</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  inner-page-footer-panel End -->
+<!--<script src="js/jquery-2.1.1.js"></script>-->
+<script src="js/main.js"></script> 
+<script>
+var lastScrollTop = 0;
+$(window).scroll(function()
+{
+	/*if ($(this).scrollTop() == 0)
+	{  
+		$('.footer').removeClass("sticky");
+	}
+	else
+	{
+		$('.footer').addClass("sticky");
+	}*/
+   var st = $(this).scrollTop();
+   if(st > lastScrollTop)
+   {
+      if($(this).scrollTop() + $(this).height() == $(document).height())
+	  {
+	    $('.footer').fadeIn('300');
+	  }
+	  else
+	  {
+	  	$('.footer').fadeOut('300');
+	  }
+   }
+   else
+   {
+      $('.footer').fadeIn('300');
+   }
+   lastScrollTop = st;
+});
+</script>
+<script src="js/responsive-calendar.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1; //January is 0!
+	
+		var yyyy = today.getFullYear();
+		if(dd<10){
+			dd='0'+dd
+		} 
+		if(mm<10){
+			mm='0'+mm
+		} 
+		var today = yyyy+'-'+mm+'-'+dd;
+		$(".responsive-calendar").responsiveCalendar({
+          time: today,
+          allRows: false,
+		  events: {
+            "2013-04-30": {"number": 5, "url": "http://w3widgets.com/responsive-slider"},
+            "2013-04-26": {"number": 1, "url": "http://w3widgets.com"}, 
+            "2015-04-17":{"number": 1}, 
+            "2013-06-12": {}}
+        });
+      });
+    </script>
+<!-- Resource jQuery -->
+</body>
+</html>

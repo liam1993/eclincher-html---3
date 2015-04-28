@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=false;” />
+<title>Filters</title>
+<link rel="icon" href="img/favicon.gif" type="image/gif" sizes="16x16">
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
+<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+<link href="css/style.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="css/reset.css">
+<!-- CSS reset -->
+<link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<!--        <link href="css/bootstrap-theme.css" type="text/css" rel="stylesheet"/>-->
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="css/my-style.css" type="text/css" rel="stylesheet"/>
+ 
+<script type="text/javascript" src="js/jquery.js"></script>
+ <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<br />
+<script src="js/modernizr.js"></script>
+<!-- Modernizr -->
+</head>
+<body class="inner-page-body">
+
+<!--  inner-page-header-panel Start -->     
+<div class="inner-page-header-panel">
+   <div class="container-fluid">
+      <div class="row" style="background-image:url(img/inner-header-strip.jpg);">    	
+        <div class="col-xs-12 col-lg-12 text-center center-block">
+        <div class="col-xs-3 col-sm-3 col-lg-3 padding-left"><img src="img/small-logo.png" class="img-responsive small-logo-img" /></div>
+        <div class="col-xs-6 col-sm-6 col-lg-6 inner-page-header-title-panel col-xs-12 col-lg-12 text-center center-block"><strong>Filters</strong></div>                   
+        <div class="col-xs-3  col-sm-3 col-lg-3 padding-right">
+        <a href="setting.html"><img src="img/setting.png" class="img-responsive setting-img" /></a>
+        <a href="filers.html"><img src="img/filter-icon.png" class="img-responsive setting-img" /></a>                            
+        </div>
+        <div class="clearfix"></div>
+        </div>        
+      </div>
+   </div>
+</div>
+<!--  inner-page-header-panel End --> 
+
+<!--  inner-page-header-panel Start -->
+<div class="publish-panel-content">
+  <div class="container">
+  
+
+  
+  
+<div class="row  inner-row-publish">                 
+<div class="facebook-center  text-center center-block ">
+      <div class=" publish-new-post-panel-rounded center-block float-none">
+        <div class="publish-new-post-tab-box tab-box publish-panel col-xs-12 col-sm-12 col-lg-12">
+          <div class="cd-tabs">            
+                            <p class="tab-main-headding text-center center-block">Filters</p>                
+            <!-- cd-tabs-content -->
+          </div>
+        </div>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!--  inner-page-header-panel End -->
+<!--  inner-page-footer-panel Start -->
+<div class="footer inner-page-footer-panel">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="padding-left-right-none col-xs-12 col-lg-12 text-center center-block inner-footer-nav">
+        <ul class="inner-footer-nav">
+          <li><a href="home.html"><img src="img/footer-inner-home.png" class="img-responsive center-block inner-footer-nav-img" /> Home</a></li>
+          <li><a href="inbox.html"><img src="img/footer-inner-inbox.png" class="img-responsive center-block inner-footer-nav-img" /> Inbox</a></li>
+          <li><a href="publish.html"><img src="img/footer-inner-publish.png" class="img-responsive center-block inner-footer-nav-img" /> Publishing</a></li>
+          <li><a href="engagement.html"><img src="img/footer-inner-favorite.png" class="img-responsive center-block inner-footer-nav-img" /> Engagement</a></li>
+          <li><a href="analytics.html"><img src="img/footer-inner-analyze.png" class="img-responsive center-block inner-footer-nav-img" /> Analytics</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  inner-page-footer-panel End -->
+<!--<script src="js/jquery-2.1.1.js"></script>-->
+<script src="js/main.js"></script>
+<script>
+var lastScrollTop = 0;
+$(window).scroll(function()
+{
+	/*if ($(this).scrollTop() == 0)
+	{  
+		$('.footer').removeClass("sticky");
+	}
+	else
+	{
+		$('.footer').addClass("sticky");
+	}*/
+   var st = $(this).scrollTop();
+   if(st > lastScrollTop)
+   {
+      if($(this).scrollTop() + $(this).height() == $(document).height())
+	  {
+	    $('.footer').fadeIn('300');
+	  }
+	  else
+	  {
+	  	$('.footer').fadeOut('300');
+	  }
+   }
+   else
+   {
+      $('.footer').fadeIn('300');
+   }
+   lastScrollTop = st;
+});
+</script>
+<!-- Resource jQuery -->
+</body>
+</html>

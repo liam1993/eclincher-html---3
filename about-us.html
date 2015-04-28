@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=false;” />              
+        <title>About Us</title>
+        <link rel="icon" href="img/favicon.gif" type="image/gif" sizes="16x16">        
+        <link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
+<!--        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>       
+-->        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet"/>        
+		<!--<link href="css/bootstrap-theme.css" type="text/css" rel="stylesheet"/>-->
+        <link href="css/my-style.css" type="text/css" rel="stylesheet"/>        
+</head>
+
+<body class="eclincher">
+
+<div class="back-btn">
+<a href="login.html"><img src="img/back-top-btn.png" class="img-responsive" /></a>
+</div>
+
+
+<!--  logo-panel Start -->     
+<div class="logo-panel">
+   <div class="container">
+      <div class="row">    	
+        <div class="col-xs-12 col-lg-12 text-center center-block">
+		<img src="img/logo.png" class="img-responsive center-block" />
+        </div>        
+      </div>
+   </div>
+</div>
+<!--  logo-panel End --> 
+
+
+<!--  schedule-icon-panel Start -->     
+<div class="about-us-panel center-block" id="autocenterdiv">
+   <div class="container">
+      <div class="row">    	
+        
+        <div class="col-xs-12 rounded-box text-center center-block clearfix">
+        <div class="headding">
+        <H1><img src="img/about-us-icon.png"  class="img-title headding-img" />About <strong>Us</strong></H1>        
+        </div>
+        <div class="about-content">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <div class="about-margin col-xs-12 col-sm-12 about-content-address">
+        <div class="col-xs-33 col-xs-3 col-sm-2"><img src="img/address-icon.png" class="img-responsive" /></div>
+        <div class="col-xs-9 col-sm-10 about-content-address">
+        <h2>Address :</h2>
+        <p>201 San Antonio Circle Mountain View, Canada 94040.</p>
+        </div>        
+        </div>
+        
+        <div class="col-xs-12 col-sm-12 about-content-address">
+        <div class="col-xs-33 col-xs-3 col-sm-2"><img src="img/phone-icon.png" class="img-responsive" /></div>
+        <div class="col-xs-9 col-sm-10 about-content-address">
+        <h2>Contact No. :</h2>
+        <p>+1-541-754-3010</p>
+        </div>        
+        </div>
+        
+        <div class="col-xs-12 col-sm-12 about-content-address">
+        <div class="col-xs-33 col-xs-3 col-sm-2"><img src="img/email-icon.png" class="img-responsive" /></div>
+        <div class="col-xs-9 col-sm-10 about-content-address">
+        <h2>Email :</h2>
+        <p>info@eclincher.com</p>
+        </div>        
+        </div>
+        
+        <div class="col-xs-12 col-sm-12 about-content-address">
+        <div class="col-xs-33 col-xs-3 col-sm-2"><img src="img/website-icon.png" class="img-responsive" /></div>
+        <div class="col-xs-9 col-sm-10 about-content-address">
+        <h2>Website :</h2>
+        <p>www.eclincher.com</p>
+        </div>        
+        </div>
+        </div>         
+        </div>
+                
+      </div>
+   </div>
+</div>
+<!--  schedule-icon-panel End -->   
+
+
+   
+
+
+
+<!--  footer-panel Start -->     
+<!--<div class="footer-panel center-block text-center">
+   <div class="container-fluid">
+      <div class="row">    	
+	   <ul class="footer-menu">
+	    <li><a href="sign-in.html" class="border-right">Login</a></li>
+	    <li><a href="contact-us.html" >Contact Us</a></li>
+	  </ul>
+      </div>
+   </div>
+</div>-->
+<!--  get-started-panel End -->   
+
+
+
+<script src="js/jquery.js" language="javascript"></script>   
+<script type="application/javascript" language="javascript">
+$(document).ready(function() {
+  var topPos = (($(window).height() - $('.logo-panel').height())  - $('#autocenterdiv').outerHeight())/2;
+  topPos = topPos;
+  $('#autocenterdiv').css({
+    left: ($(window).width() - $('#autocenterdiv').outerWidth())/2,
+    'margin-top': topPos > 0 ? topPos : 0
+  });
+});
+</script>
+
+</body>
+</html>
